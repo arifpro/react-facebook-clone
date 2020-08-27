@@ -1,0 +1,26 @@
+/* sidebar */
+.sidebarRow {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.sidebarRow:hover {
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+/* avatar */
+.sidebarRow .MuiSvgIcon-root {
+    font-size: xx-large;
+    color: #2381f4;
+}
+
+/* icon */
+
+
+/* title */
+.sidebarRow h4 {
+    margin-left: 20px;
+    font-weight: 600;
+}
