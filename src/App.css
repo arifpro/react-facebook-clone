@@ -1,0 +1,7 @@
+.app {
+    background-color: #f1f2f5;
+    height: 100vh;
+}
+.appBody {
+    display: flex;
+}

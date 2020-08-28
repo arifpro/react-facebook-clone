@@ -4,15 +4,16 @@ import './App.css';
 // components
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
+import Feed from './components/Feed/Feed';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
 
       <div className="appBody">
         <Sidebar />
-        {/* feed */}
+        <Feed />
         {/* widgets */}
       </div>
     </div>
