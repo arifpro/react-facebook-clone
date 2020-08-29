@@ -1,5 +1,7 @@
 import React from 'react';
 import './Header.css';
+import NavItem from './NavItem/NavItem';
+import DropdownMenu from './DropdownMenu/DropdownMenu';
 
 // icons
 import SearchIcon from '@material-ui/icons/Search';
@@ -8,11 +10,20 @@ import FlagIcon from '@material-ui/icons/Flag';
 import SubscriptionsOutlinedIcon from '@material-ui/icons/SubscriptionsOutlined';
 import StorefrontOutlinedIcon from '@material-ui/icons/StorefrontOutlined';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
-import AddIcon from '@material-ui/icons/Add';
-import ForumIcon from '@material-ui/icons/Forum';
-import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Avatar, IconButton } from '@material-ui/core'
+// import AddIcon from '@material-ui/icons/Add';
+// import ForumIcon from '@material-ui/icons/Forum';
+// import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Avatar } from '@material-ui/core'
+// import { IconButton } from '@material-ui/core'
+
+
+import { ReactComponent as BellIcon } from '../../img/icons/bell.svg';
+import { ReactComponent as MessengerIcon } from '../../img/icons/messenger.svg';
+import { ReactComponent as CaretIcon } from '../../img/icons/caret.svg';
+import { ReactComponent as PlusIcon } from '../../img/icons/plus.svg';
+
+
 
 // image
 import fbLogo from '../../img/fbLogo.webp'
@@ -52,7 +63,7 @@ const Header = () => {
                     <h4>Md Arif Hossain</h4>
                 </div>
 
-                <IconButton>
+                {/* <IconButton>
                     <AddIcon />
                 </IconButton>
                 <IconButton>
@@ -63,7 +74,18 @@ const Header = () => {
                 </IconButton>
                 <IconButton>
                     <ExpandMoreIcon />
-                </IconButton>
+                </IconButton> */}
+                <nav className="navbar">
+                    <ul className="navbar-nav">
+                        <NavItem icon={<PlusIcon />} />
+                        <NavItem icon={<MessengerIcon />} />
+                        <NavItem icon={<BellIcon />} />
+
+                        <NavItem icon={<CaretIcon />}>
+                        <DropdownMenu></DropdownMenu>
+                        </NavItem>
+                    </ul>
+                </nav>
             </div>
         </div>
     )
