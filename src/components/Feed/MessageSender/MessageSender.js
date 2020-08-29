@@ -19,7 +19,8 @@ const MessageSender = () => {
                     <button onClick={handleSubmit} type="submit">Hidden submit</button>
                 </form>
             </div>
-            <div className="messageSenderTop">
+
+            <div className="messageSenderBottom">
                 <div className="messageSenderOption">
                     <Videocam style={{color: 'red'}} />
                     <h3>Live Video</h3>
