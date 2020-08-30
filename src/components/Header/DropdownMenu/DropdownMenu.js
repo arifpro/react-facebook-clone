@@ -69,7 +69,7 @@ const DropdownMenu = () => {
         >
             <div className="menu">
                 {/* <DropdownItem>My Profile</DropdownItem> */}
-                <DropdownItemImage image={user.photoUTL}>{user.displayName}</DropdownItemImage>
+                <DropdownItemImage image={user.photoURL}>{user.displayName}</DropdownItemImage>
 
                 <hr className="hrTag" />
                 <DropdownItem
