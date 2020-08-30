@@ -1,6 +1,9 @@
 import React from 'react';
 import './Post.css'
+
+// Icons
 import { Avatar } from '@material-ui/core';
+import { ThumbUp, ChatBubbleOutline, AccountCircle, NearMe, ExpandMoreOutlined } from '@material-ui/icons';
 
 const Post = ({ profilePic, image, username, timestamp, message }) => {
     return (
@@ -20,7 +23,29 @@ const Post = ({ profilePic, image, username, timestamp, message }) => {
             </div>
 
             <div className="postImage">
-                <img src={image} alt={username}/>
+                <img src={image} alt=""/>
+            </div>
+
+            <div className="postOptions">
+                <div className="postOption">
+                    <ThumbUp />
+                    <p>Like</p>
+                </div>
+
+                <div className="postOption">
+                    <ChatBubbleOutline />
+                    <p>Comment</p>
+                </div>
+
+                <div className="postOption">
+                    <NearMe />
+                    <p>Share</p>
+                </div>
+
+                <div className="postOption">
+                    <AccountCircle />
+                    <ExpandMoreOutlined />
+                </div>
             </div>
         </div>
     )
