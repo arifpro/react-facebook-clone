@@ -27,6 +27,7 @@ import { ReactComponent as PlusIcon } from '../../img/icons/plus.svg';
 
 // image
 import fbLogo from '../../img/fbLogo.webp'
+import Arif from '../../img/story/arif.jpg'
 
 const Header = () => {
     return (
@@ -59,7 +60,7 @@ const Header = () => {
             
             <div className="headerRight">
                 <div className="headerInfo">
-                    <Avatar />
+                    <Avatar src={Arif} />
                     <h4>Md Arif Hossain</h4>
                 </div>
 
