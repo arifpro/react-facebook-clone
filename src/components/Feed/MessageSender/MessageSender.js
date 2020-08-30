@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './MessageSender.css'
+import firebase from 'firebase'
 
 // icons
 import { Avatar } from '@material-ui/core'
@@ -7,6 +8,9 @@ import { Videocam, PhotoLibrary, InsertEmoticon} from '@material-ui/icons'
 
 // context api
 import { useStateValue } from '../../../state/Provider'
+
+// database
+import db from '../../../firebase'
 
 const MessageSender = () => {
     const [{ user }, dispatch] = useStateValue();
@@ -16,8 +20,16 @@ const MessageSender = () => {
     const handleSubmit = e => {
         e.preventDefault();
 
-        // some clever db stuff
+        // send data to database
+        db.collection('posts').add({
+            message: input,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            profilePic: user.photoURL,
+            username: user.displayName,
+            image: imageUrl
+        })
 
+        // clear form
         setInput('');
         setImageUrl('');
     }
