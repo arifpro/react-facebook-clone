@@ -17,19 +17,20 @@ import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 import { Avatar } from '@material-ui/core'
 // import { IconButton } from '@material-ui/core'
 
-
 import { ReactComponent as BellIcon } from '../../img/icons/bell.svg';
 import { ReactComponent as MessengerIcon } from '../../img/icons/messenger.svg';
 import { ReactComponent as CaretIcon } from '../../img/icons/caret.svg';
 import { ReactComponent as PlusIcon } from '../../img/icons/plus.svg';
 
-
-
 // image
 import fbLogo from '../../img/fbLogo.webp'
-import Arif from '../../img/story/arif.jpg'
+
+// context api
+import { useStateValue } from '../../state/Provider'
 
 const Header = () => {
+    const [{ user }, dispatch] = useStateValue();
+
     return (
         <div className="header">
             <div className="headerLeft">
@@ -60,8 +61,8 @@ const Header = () => {
             
             <div className="headerRight">
                 <div className="headerInfo">
-                    <Avatar src={Arif} />
-                    <h4>Md Arif Hossain</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4>{user.displayName}</h4>
                 </div>
 
                 {/* <IconButton>

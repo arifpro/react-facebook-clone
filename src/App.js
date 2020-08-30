@@ -8,8 +8,11 @@ import Feed from './components/Feed/Feed';
 import Widgets from './components/Widgets/Widgets';
 import Login from './components/Login/Login';
 
+// context api
+import { useStateValue } from './state/Provider'
+
 function App() {
-  const user = null;
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className="app">
       { 

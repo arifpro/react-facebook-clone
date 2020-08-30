@@ -4,6 +4,9 @@ import './Sidebar.css';
 // component
 import SidebarRow from './SidebarRow/SidebarRow';
 
+// context api
+import { useStateValue } from '../../state/Provider'
+
 // icons
 import {
     LocalHospital,
@@ -16,9 +19,11 @@ import {
 } from '@material-ui/icons'
 
 const Sidebar = () => {
+    const [{ user }, dispatch] = useStateValue();
+
     return (
         <div className="sidebar">
-            <SidebarRow src='https://proarif.com/logo/Arif.jpg' title='Md Arif Hossain' />
+            <SidebarRow src={user.photoURL} title={user.displayName} />
             <SidebarRow Icon={LocalHospital} title='COVID-19 Information Center' />
             <SidebarRow Icon={EmojiFlags} title='Pages' />
             <SidebarRow Icon={People} title='Friends' />

@@ -18,7 +18,11 @@ import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import MailIcon from '@material-ui/icons/Mail';
 import ReportIcon from '@material-ui/icons/Report';
 
-function DropdownMenu() {
+// context api
+import { useStateValue } from '../../../state/Provider'
+
+const DropdownMenu = () => {
+    const [{ user }, dispatch] = useStateValue();
     const [activeMenu, setActiveMenu] = useState('main');
     const [menuHeight, setMenuHeight] = useState(null);
     const dropdownRef = useRef(null);
@@ -65,7 +69,7 @@ function DropdownMenu() {
         >
             <div className="menu">
                 {/* <DropdownItem>My Profile</DropdownItem> */}
-                <DropdownItemImage image="https://proarif.com/logo/Arif.jpg">Md Arif Hossain</DropdownItemImage>
+                <DropdownItemImage image={user.photoUTL}>{user.displayName}</DropdownItemImage>
 
                 <hr className="hrTag" />
                 <DropdownItem
