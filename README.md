@@ -1,4 +1,4 @@
-# [React Facebook Clone](https://facebook-clone-arif.web.app) &middot; [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![Author Arif](https://img.shields.io/badge/Author-Arif-%3C%3E)](https://www.linkedin.com/in/proarif)
+# [React Facebook Clone](https://facebook-clone-arif.web.app) &middot; [![Author Arif](https://img.shields.io/badge/Author-Arif-%3C%3E)](https://www.linkedin.com/in/proarif)
 This is a ReactJs site for learning purpose.
 
 ## A simple ReactJs site 
